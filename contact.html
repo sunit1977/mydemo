@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<title>Contact form validation using Javascript</title>
+			<script type"text/javascript">
+			function validate()
+			{
+				
+				if(!document.getElementById('name').value.trim().length)
+				{
+					alert("Please Enter Valid Name");
+					username.style.border = "solid 3px red";
+					return false;
+				}
+				else if(!document.getElementById('subject').value.trim().length)
+				{
+					alert("Please Enter Correct Subject");
+					subject.style.border = "solid 3px red";
+					return false;
+				}
+				else if(!document.getElementById('phone').value.trim().length)
+				{
+					alert("Please Enter Valid Phone Number");
+					Mobile.style.border = "solid 3px red";
+					return false;
+				}
+				else if(!document.getElementById('email').value.trim().length)
+				{
+					alert("Please Enter Valid Email");
+					email.style.border = "solid 3px red";
+					return false;
+				}
+				else if(!document.getElementById('message').value.trim().length)
+				{
+					alert("Please Explain In Brief");
+					message.style.border = "solid 3px red";
+					return false;
+				}
+				else 
+				{	
+					return true;
+				}
+			}
+		</script>
+	</head>	
+	<body>
+		<div class="wrapper">
+			<h2>contact us</h2>
+			<form id="myform">
+				<div class="input_field">
+					<input type="text" placeholder="Name" id="name">
+				</div>
+				<div class="input_field">
+					<input type="text" placeholder="Subject" id="subject">
+				</div>
+				<div class="input_field">
+					<input type="number" placeholder="Mobile Number" id="phone">
+				</div>
+				<div class="input_field">
+					<input type="email" placeholder="Email" id="email">
+				</div>
+				<div class="input_field">
+					<textarea id="message" placeholder="Message"></textarea>
+				</div>	
+				<div class="btn">
+					<input type="submit" onclick=" return validate()">
+				</div>
+			</form>		
+		</div>	
+	</body>
+</html>	
